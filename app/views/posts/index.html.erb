@@ -1,0 +1,21 @@
+
+
+	<%= search_form_for [@q] do |f| %>
+	<%= f.search_field :title_cont %>
+	<%= f.submit %>
+	<% end %>
+
+	<table border="1">
+	<tr>
+		<th>title</th>
+		<th>content</th>
+		
+	</tr>
+<% @posts.each do |post| %>
+			<tr>
+				<td><%=post.title%></td>
+				<td><%=post.content %></td>
+			</tr>
+	<% end %>
+</table>
+
